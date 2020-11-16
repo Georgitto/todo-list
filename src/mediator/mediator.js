@@ -1,4 +1,4 @@
-export class Mediator {
+class Mediator {
     constructor() {
         this.obj = {
             subscriptions: {}

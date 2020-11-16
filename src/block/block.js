@@ -1,17 +1,17 @@
-import {Mediator} from "./mediator"
-
-export class Block {
+class Block {
     meta = {};
     element = null;
 
-    constructor(tagName = "div", props = {}) {
+    constructor(tagName = "div", props = {id:'', innerHTML:''}, child = []) {
         this.mediator = () => new Mediator();
         this.meta = {
             tagName,
             props,
+            child,
         }
 
-        this.initializeEl();
+        // this.subscribeEvents(this.mediator());
+        // this.initializeEl();
     }
 
     subscribeEvents(mediator) {
@@ -32,6 +32,10 @@ export class Block {
             return;
         }
         Object.assign(this.meta.props, newProps);
+    }
+
+    setParent(parentEl,currentEl) {
+        currentEl.parent = parentEl.props.className;
     }
 }
 
