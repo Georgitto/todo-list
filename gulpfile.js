@@ -57,9 +57,9 @@ gulp.task("html", function () {
 
 gulp.task("js", function() {
     return gulp.src(["./src/components/todo.js",
-        "./src/components/block/block.js",
-        "./src/components/mediator/mediator.js",
-        "./src/components/render/render.js"])
+        "./src/block/block.js",
+        "./src/mediator/mediator.js",
+        "./src/render/render.js"])
         .pipe(dest("./dist"));
 });
 

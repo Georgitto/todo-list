@@ -1,4 +1,4 @@
-import {Block} from "../src/block/block";
+import {Block} from "./block";
 
 export let ul = new Block('block', {
     display: 'block',
